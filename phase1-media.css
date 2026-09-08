@@ -5,13 +5,10 @@
   margin-top:18px;
 }
 .hall-gallery figure{margin:0}
-.hall-gallery a{display:block;text-decoration:none}
 .hall-gallery img{
   display:block;
   width:100%;
   height:auto;
-  aspect-ratio:16/9;
-  object-fit:contain;
   border-radius:16px;
   border:1px solid var(--line,#dbe3ef);
   background:#f5f7fa;
