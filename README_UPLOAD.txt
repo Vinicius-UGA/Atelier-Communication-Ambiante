@@ -1,32 +1,25 @@
-UPLOAD AU GITHUB — PHASE 1 CORRIGÉE V2
+ATELIER COMMUNICATION AMBIANTE — PHASE 2
 
-Décompressez ce ZIP et téléversez TOUS les fichiers directement à la RACINE du dépôt
-Vinicius-UGA/Atelier-Communication-Ambiante.
+Placez tous les fichiers de ce dossier à la RACINE du dépôt GitHub :
 
-Remplacez les fichiers existants lorsqu'ils portent le même nom.
+- phase-2-groupe-1.html
+- phase-2-groupe-2.html
+- phase-2-groupe-3.html
+- phase-2-groupe-4.html
+- phase-2-groupe-5.html
+- phase2-page.js
+- phase2.js
+- phase2.css
 
-Fichiers à remplacer :
-- phase-1-groupe-1.html
-- phase-1-groupe-2.html
-- phase-1-groupe-3.html
-- phase-1-groupe-4.html
-- phase-1-groupe-5.html
-- phase1-media.js
-- phase1-media.css
+Les fichiers phase-2-groupe-*.html remplacent les pages Phase 2 actuellement présentes.
+Les trois fichiers phase2-* sont nouveaux.
 
-Nouveaux fichiers à ajouter à la racine :
-- phase1-cleanup.js
-- hall-original-1.jpg
-- hall-original-2.jpg
-- hall-original-3.jpg
-- hall-original-4.jpg
-- exemple-fresque.png
+Ne supprimez pas styles.css, phase1.js, phase1-page.js, les pages Phase 1 ou les autres fichiers existants.
 
-IMPORTANT : les images sont volontairement à la racine afin d'éviter tout problème de chemin relatif.
-Les quatre photos du hall sont en 1920 × 1080 (Full HD), qualité JPEG élevée.
-L'image exemple-fresque.png est exactement l'image fournie dans la conversation.
-
-SUPPRESSION DU « teste » :
-Après le déploiement GitHub Pages, ouvrez UNE FOIS n'importe quelle page Phase 1.
-Le fichier phase1-cleanup.js supprimera automatiquement « teste » de la proposition 4 du Groupe 1,
-uniquement s'il s'agit encore exactement de cette valeur. Un marqueur empêche que ce nettoyage soit répété.
+Fonctionnement :
+1. Les 25 modifications sont lues directement depuis Firebase, dans les 5 groupes de la Phase 1.
+2. Chaque page de Phase 2 montre les mêmes 25 modifications, classées Groupe 1 à Groupe 5.
+3. Le groupe correspondant à la page peut choisir une seule modification.
+4. Une transaction Firebase empêche deux groupes de retenir la même modification.
+5. Les choix sont enregistrés de façon permanente sous atelier/phase2/choix.
+6. Le choix peut être modifié en choisissant une autre proposition, ou annulé avec le bouton prévu.
