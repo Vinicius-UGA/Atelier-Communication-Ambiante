@@ -1,13 +1,7 @@
-UPLOAD NO GITHUB — PHASE 2 V3
+PHASE 2 — CORRECTION V4
 
-IMPORTANTE: esta versão inclui cache-busting.
+Envoyez les 8 fichiers de ce dossier directement à la racine du dépôt GitHub et remplacez les fichiers existants :
 
-1. Abra a raiz do repositório Atelier-Communication-Ambiante.
-2. Faça upload de TODOS os 8 arquivos deste ZIP DIRETAMENTE NA RAIZ do repositório.
-3. Aceite substituir os arquivos existentes.
-4. Não crie uma subpasta phase2_package_v3.
-
-Arquivos que precisam substituir os antigos:
 - phase-2-groupe-1.html
 - phase-2-groupe-2.html
 - phase-2-groupe-3.html
@@ -17,10 +11,9 @@ Arquivos que precisam substituir os antigos:
 - phase2.js
 - phase2.css
 
-Mudanças visíveis:
-- removido o texto introdutório inicial da Phase 2;
-- removida qualquer indicação de “5 modifications” ao lado do nome dos grupos;
-- removido o texto/status “Connecté · 25 propositions…”;
-- uma proposta escolhida por outro grupo fica ROSA/VERMELHA forte, com borda vermelha grossa e etiqueta “INDISPONIBLE — déjà retenue par le Groupe X”;
-- botão da proposta indisponível também fica vermelho;
-- query ?v=20260908-1908 força o navegador a carregar a nova versão dos arquivos.
+Modifications V4 :
+- la phrase explicative sous le titre « Phase 2 — Présentation & choix » est rétablie ;
+- une proposition déjà choisie par un autre groupe reste rose/rouge avec bordure rouge ;
+- la grande phrase « INDISPONIBLE — déjà retenue par le Groupe X » est supprimée ;
+- le bouton « Indisponible » reste visible ;
+- les URLs JS/CSS utilisent une nouvelle version pour forcer le rechargement du navigateur.

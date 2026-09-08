@@ -71,13 +71,13 @@
         if (mine) {
           state.textContent = `Choix actuel du Groupe ${currentGroup}`;
         } else if (taken) {
-          state.textContent = `INDISPONIBLE — déjà retenue par le Groupe ${ownerGroup}`;
+          state.remove();
         } else if (!text) {
           state.textContent = 'Aucune proposition enregistrée dans ce champ.';
         } else {
           state.textContent = `Modification ${slot} du Groupe ${sourceGroup}`;
         }
-        copy.appendChild(state);
+        if (!taken) copy.appendChild(state);
 
         const button = document.createElement('button');
         button.type = 'button';

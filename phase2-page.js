@@ -17,6 +17,7 @@
         <div class="eyebrow">Atelier Communication Ambiante</div>
         <h1>Phase 2 — Présentation & choix</h1>
         <div class="group-badge">Groupe ${group}</div>
+        <p>Les 25 modifications prioritaires issues de la Phase 1 sont réunies ci-dessous. Après leur présentation et leur défense par les représentants des cinq groupes, votre groupe doit retenir <strong>une seule modification prioritaire</strong>.</p>
       </section>
 
       <section class="section-card">
