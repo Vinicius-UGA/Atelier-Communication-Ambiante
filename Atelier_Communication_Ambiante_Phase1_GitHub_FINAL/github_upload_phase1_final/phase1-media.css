@@ -1,0 +1,35 @@
+.hall-gallery{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:16px;
+  margin-top:18px;
+}
+.hall-gallery figure{margin:0}
+.hall-gallery img{
+  display:block;
+  width:100%;
+  height:auto;
+  aspect-ratio:16/9;
+  object-fit:contain;
+  border-radius:16px;
+  border:1px solid var(--line,#dbe3ef);
+  background:#f5f7fa;
+  box-shadow:0 10px 28px rgba(20,55,90,.08);
+}
+.hall-gallery figcaption{
+  margin-top:7px;
+  font-size:.8rem;
+  color:var(--muted,#667085);
+}
+.example-idea-image{
+  display:block;
+  width:100%;
+  height:auto;
+  margin-top:18px;
+  border-radius:18px;
+  border:1px solid var(--line,#dbe3ef);
+  box-shadow:0 16px 42px rgba(20,55,90,.10);
+}
+@media(max-width:780px){
+  .hall-gallery{grid-template-columns:1fr}
+}
