@@ -2,6 +2,7 @@
   'use strict';
 
   function applyPhase1MediaPatch() {
+    // Retire le texte général sur les 30 minutes.
     document.querySelectorAll('.section-card').forEach((section) => {
       const title = section.querySelector('h2')?.textContent?.trim() || '';
       if (title === 'Déroulé de la Phase 1') {
@@ -10,12 +11,17 @@
       }
     });
 
+    // Le chat reste collaboratif, mais sans le texte explicatif sur l'anonymat / 1000 messages.
     const brainstormingIntro = document.querySelector('#brainstorming .section-intro');
     if (brainstormingIntro) {
       brainstormingIntro.textContent = 'Le chat de votre groupe est collaboratif et se met à jour en direct. Utilisez les boutons ci-dessous pour consulter les autres groupes en lecture seule.';
     }
 
+    // Retire les mentions visuelles « Messages anonymes… » et « …à tout moment »
+    // ainsi que le compteur visible. La limite technique interne reste inchangée.
     document.querySelector('#chat-counter')?.remove();
+    document.querySelector('#brainstorming .chat-foot')?.remove();
+    document.querySelector('#brainstorming .privacy-note')?.remove();
 
     const selection = document.querySelector('#selection');
     if (!selection || document.querySelector('#hall-photos')) return;
@@ -25,17 +31,29 @@
         <h2>Photos originales du hall</h2>
         <p class="section-intro">Quatre vues larges du hall pour garder une vision concrète de l’espace pendant la réflexion.</p>
         <div class="hall-gallery">
-          <figure><div class="hall-photo hall-photo-1" role="img" aria-label="Vue large originale du hall côté assises et rampe"></div><figcaption>Vue 1</figcaption></figure>
-          <figure><div class="hall-photo hall-photo-2" role="img" aria-label="Vue large originale du hall côté circulation principale"></div><figcaption>Vue 2</figcaption></figure>
-          <figure><div class="hall-photo hall-photo-3" role="img" aria-label="Vue large originale du hall sous la mezzanine"></div><figcaption>Vue 3</figcaption></figure>
-          <figure><div class="hall-photo hall-photo-4" role="img" aria-label="Vue large originale complémentaire du hall"></div><figcaption>Vue 4</figcaption></figure>
+          <figure>
+            <img src="assets/hall-original-1.jpg" alt="Vue large originale du hall côté assises et rampe" loading="lazy">
+            <figcaption>Vue 1</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/hall-original-2.jpg" alt="Vue large originale du hall côté circulation principale" loading="lazy">
+            <figcaption>Vue 2</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/hall-original-3.jpg" alt="Vue large originale du hall sous la mezzanine" loading="lazy">
+            <figcaption>Vue 3</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/hall-original-4.jpg" alt="Vue large originale complémentaire du hall" loading="lazy">
+            <figcaption>Vue 4</figcaption>
+          </figure>
         </div>
       </section>
 
       <section class="section-card example-idea" id="example-fresque">
         <h2>Exemple d’idée : fresque dans le mur du hall</h2>
         <p class="section-intro">Exemple visuel pour illustrer comment une intervention graphique à dominante bleue peut participer à la communication ambiante du hall.</p>
-        <img class="example-idea-image" src="assets/exemple-fresque-bleue.webp" alt="Exemple visuel généré d'une intervention graphique bleue dans le hall">
+        <img class="example-idea-image" src="assets/exemple-fresque.png" alt="Exemple de fresque bleue dans le hall">
       </section>
     `);
   }
