@@ -48,7 +48,7 @@
     for (let sourceGroup = 1; sourceGroup <= 5; sourceGroup += 1) {
       const block = document.createElement('section');
       block.className = 'phase2-group-block';
-      block.innerHTML = `<div class="phase2-group-title"><h3>Groupe ${sourceGroup}</h3><span class="proposal-count">5 modifications</span></div>`;
+      block.innerHTML = `<div class="phase2-group-title"><h3>Groupe ${sourceGroup}</h3></div>`;
 
       const list = document.createElement('div');
       list.className = 'phase2-proposals';

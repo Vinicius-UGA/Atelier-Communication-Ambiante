@@ -22,8 +22,6 @@
 
       <section class="section-card">
         <h2>Les 25 modifications prioritaires</h2>
-        <p class="section-intro">Les propositions sont classées par groupe d’origine. Une même modification ne peut être retenue que par un seul groupe : dès qu’elle est choisie, elle devient indisponible pour les autres groupes.</p>
-        <div id="phase2-status" class="phase2-status">Connexion à l’archive permanente…</div>
         <div id="all-proposals" class="phase2-groups" aria-live="polite"></div>
       </section>
 
