@@ -1,12 +1,11 @@
-ATELIER COMMUNICATION AMBIANTE — MISE À JOUR PHASE 1
+ATELIER COMMUNICATION AMBIANTE — CORRECTION PHASE 1
 
-1. Ouvrez le dépôt GitHub : Vinicius-UGA/Atelier-Communication-Ambiante
-2. À la racine du dépôt, téléversez tous les fichiers et dossiers contenus dans ce ZIP.
-3. Conservez exactement la structure des dossiers : les 5 images se trouvent dans /assets.
-4. Autorisez GitHub à remplacer les fichiers existants portant le même nom.
-5. Validez le commit sur la branche main.
+Copiez le CONTENU de ce dossier à la RACINE du dépôt GitHub :
+Vinicius-UGA/Atelier-Communication-Ambiante
 
-Fichiers à la racine :
+Remplacez les fichiers existants quand GitHub le demande.
+
+FICHIERS À LA RACINE À REMPLACER :
 - phase1-media.js
 - phase1-media.css
 - phase-1-groupe-1.html
@@ -15,12 +14,19 @@ Fichiers à la racine :
 - phase-1-groupe-4.html
 - phase-1-groupe-5.html
 
-Fichiers dans /assets :
+FICHIERS DANS /assets À AJOUTER/REMPLACER :
 - hall-original-1.jpg
 - hall-original-2.jpg
 - hall-original-3.jpg
 - hall-original-4.jpg
 - exemple-fresque.png
 
-Les 4 photos du hall sont les fichiers originaux 2048 × 1152, sans recompression.
-L'image exemple-fresque.png est exactement l'image fournie dans le chat.
+CORRECTIONS INCLUSES :
+1. Suppression de la ligne « Messages anonymes… » / « …à tout moment ».
+2. Suppression de l'affichage de la limite « 1000 messages » (la limite technique interne reste sans être affichée).
+3. Les 4 photos du hall sont les fichiers JPEG originaux 2048 × 1152, copiés octet pour octet sans recompression.
+4. Chaque photo est cliquable afin d'ouvrir directement le fichier original pleine résolution.
+5. L'image exemple-fresque.png est exactement l'image fournie par Vinicius dans le chat, sans modification ni recompression.
+
+IMPORTANT :
+Ne placez pas le dossier parent lui-même dans le dépôt. Téléversez son CONTENU à la racine, en conservant le sous-dossier /assets.

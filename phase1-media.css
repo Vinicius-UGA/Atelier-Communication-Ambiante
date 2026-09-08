@@ -5,6 +5,7 @@
   margin-top:18px;
 }
 .hall-gallery figure{margin:0}
+.hall-gallery a{display:block;text-decoration:none}
 .hall-gallery img{
   display:block;
   width:100%;
