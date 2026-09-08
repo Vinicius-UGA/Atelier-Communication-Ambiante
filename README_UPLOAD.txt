@@ -1,19 +1,10 @@
-PHASE 2 — CORRECTION V4
+CORRECTION PHASE 2 — GROUPES 1 ET 2
 
-Envoyez les 8 fichiers de ce dossier directement à la racine du dépôt GitHub et remplacez les fichiers existants :
-
+Remplacez uniquement à la racine du dépôt GitHub :
 - phase-2-groupe-1.html
 - phase-2-groupe-2.html
-- phase-2-groupe-3.html
-- phase-2-groupe-4.html
-- phase-2-groupe-5.html
-- phase2-page.js
-- phase2.js
-- phase2.css
 
-Modifications V4 :
-- la phrase explicative sous le titre « Phase 2 — Présentation & choix » est rétablie ;
-- une proposition déjà choisie par un autre groupe reste rose/rouge avec bordure rouge ;
-- la grande phrase « INDISPONIBLE — déjà retenue par le Groupe X » est supprimée ;
-- le bouton « Indisponible » reste visible ;
-- les URLs JS/CSS utilisent une nouvelle version pour forcer le rechargement du navigateur.
+Cette version force le rechargement de phase2-page.js afin que le texte introductif apparaisse aussi dans les Groupes 1 et 2.
+
+Texte attendu :
+« Les 25 modifications prioritaires issues de la Phase 1 sont réunies ci-dessous. Après leur présentation et leur défense par les représentants des cinq groupes, votre groupe doit retenir une seule modification prioritaire. »
