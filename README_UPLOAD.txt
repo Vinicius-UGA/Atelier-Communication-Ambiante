@@ -1,13 +1,6 @@
-PHASE 3 — VERSION LIBRE V2
+PHASE 3 — CORRECTION V3 — À METTRE DIRECTEMENT À LA RACINE DU REPOSITORY
 
-Modification principale :
-- le document n'est plus divisé en 4 blocs de rédaction ;
-- les quatre questions restent visibles comme guide en haut de la feuille ;
-- toute la partie inférieure est une seule grande zone de texte libre ;
-- images et dessins restent libres sur toute la feuille ;
-- les anciens textes enregistrés dans les 4 champs sont automatiquement regroupés dans la nouvelle zone libre lors du premier chargement.
-
-À mettre directement à la racine du repository GitHub :
+Remplacez les 8 fichiers suivants :
 - phase-3-groupe-1.html
 - phase-3-groupe-2.html
 - phase-3-groupe-3.html
@@ -17,4 +10,14 @@ Modification principale :
 - phase3.js
 - phase3.css
 
-Remplacez les versions existantes.
+Corrections appliquées AUX CINQ GROUPES :
+1. Suppression complète du texte d'aide « Texte : cliquez... Images : ... Dessin : ... ».
+2. Les quatre consignes restent exactement dans la zone de rédaction, avec leur position et leur espacement :
+   - Quoi exactement ? + description
+   - Comment ? + description
+   - Où ? + description
+   - Budget estimatif + description
+3. Il n'y a plus quatre cadres/blocs visuels séparés : la feuille est un seul espace blanc continu.
+4. Toute cette zone est éditable comme un seul document : les participants peuvent écrire directement sous les consignes et modifier le contenu librement.
+5. Images et dessin restent libres sur toute la feuille.
+6. Les cinq pages utilisent la même nouvelle version des fichiers JS/CSS afin d'éviter qu'un groupe garde une ancienne version en cache.
