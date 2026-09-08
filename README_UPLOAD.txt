@@ -1,10 +1,25 @@
-CORRECTION PHASE 2 — GROUPES 1 ET 2
+PHASE 3 — FICHIERS À METTRE DANS LA RACINE DU REPOSITORY GITHUB
 
-Remplacez uniquement à la racine du dépôt GitHub :
-- phase-2-groupe-1.html
-- phase-2-groupe-2.html
+Remplacez les 5 fichiers existants :
+- phase-3-groupe-1.html
+- phase-3-groupe-2.html
+- phase-3-groupe-3.html
+- phase-3-groupe-4.html
+- phase-3-groupe-5.html
 
-Cette version force le rechargement de phase2-page.js afin que le texte introductif apparaisse aussi dans les Groupes 1 et 2.
+Ajoutez ces 3 nouveaux fichiers à la racine :
+- phase3-page.js
+- phase3.js
+- phase3.css
 
-Texte attendu :
-« Les 25 modifications prioritaires issues de la Phase 1 sont réunies ci-dessous. Après leur présentation et leur défense par les représentants des cinq groupes, votre groupe doit retenir une seule modification prioritaire. »
+Ne modifiez pas styles.css, la Phase 1 ou la Phase 2.
+
+Fonctionnement :
+- récupère automatiquement la modification retenue en Phase 2 pour chaque groupe ;
+- document guidé avec 4 rubriques : Quoi exactement ? Comment ? Où ? Budget estimatif ;
+- import d'images, déplaçables et redimensionnables librement ;
+- dessin libre sur toute la feuille avec stylo rouge, bleu, vert ou jaune ;
+- bouton Annuler trait et Effacer dessin ;
+- bouton Enregistrer le travail : texte + images + dessin sont sauvegardés dans Firebase.
+
+IMPORTANT : les règles actuelles de Firebase doivent continuer à autoriser les utilisateurs authentifiés anonymement à lire/écrire.
