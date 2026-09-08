@@ -34,13 +34,16 @@
           <button id="undo-stroke" class="phase3-tool-button compact" type="button">↶ Annuler trait</button>
           <button id="clear-drawing" class="phase3-tool-button compact danger-lite" type="button">Effacer dessin</button>
         </div>
-        <div class="board-help"><strong>Texte :</strong> cliquez dans les quatre zones et écrivez librement. <strong>Images :</strong> faites-les glisser pour les déplacer et utilisez le coin inférieur droit pour les redimensionner. <strong>Dessin :</strong> activez « Dessiner », choisissez une couleur puis dessinez sur toute la feuille.</div>
+        <div class="board-help"><strong>Texte :</strong> cliquez n’importe où dans la grande zone de rédaction et écrivez librement. <strong>Images :</strong> faites-les glisser pour les déplacer et utilisez le coin inférieur droit pour les redimensionner. <strong>Dessin :</strong> activez « Dessiner », choisissez une couleur puis dessinez sur toute la feuille.</div>
         <div id="workspace" class="workspace" aria-label="Document de travail du groupe">
           <div class="document-text-layer">
-            <section class="prompt-block"><div class="prompt-label">1 · Quoi exactement ?</div><div id="text-what" class="editable-block" contenteditable="true" data-placeholder="Décrivez précisément ce que vous souhaitez créer, modifier ou installer…"></div></section>
-            <section class="prompt-block"><div class="prompt-label">2 · Comment ?</div><div id="text-how" class="editable-block" contenteditable="true" data-placeholder="Expliquez le fonctionnement, les matériaux, les étapes, les usages, les personnes impliquées…"></div></section>
-            <section class="prompt-block"><div class="prompt-label">3 · Où ?</div><div id="text-where" class="editable-block" contenteditable="true" data-placeholder="Indiquez l’emplacement précis dans le hall ou dans l’école et expliquez pourquoi…"></div></section>
-            <section class="prompt-block budget-block"><div class="prompt-label">4 · Budget estimatif</div><div id="text-budget" class="editable-block" contenteditable="true" data-placeholder="Donnez une estimation approximative : matériel, fabrication, installation, prestations externes…"></div></section>
+            <div class="phase3-guides" aria-label="Questions à traiter">
+              <div><strong>Quoi exactement ?</strong> Décrivez précisément ce que vous souhaitez créer, modifier ou installer.</div>
+              <div><strong>Comment ?</strong> Expliquez le fonctionnement, les matériaux, les étapes, les usages et les personnes impliquées.</div>
+              <div><strong>Où ?</strong> Indiquez l’emplacement précis dans le hall ou dans l’école et expliquez pourquoi.</div>
+              <div><strong>Budget estimatif</strong> Donnez une estimation approximative : matériel, fabrication, installation, prestations externes.</div>
+            </div>
+            <div id="text-free" class="free-editor" contenteditable="true" data-placeholder="Écrivez librement ici. Vous pouvez organiser votre texte comme vous le souhaitez…"></div>
           </div>
           <div id="image-layer" class="image-layer" aria-label="Images ajoutées"></div>
           <canvas id="drawing-canvas" class="drawing-canvas" aria-label="Calque de dessin"></canvas>
