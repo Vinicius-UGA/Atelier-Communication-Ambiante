@@ -1,7 +1,13 @@
-ATELIER COMMUNICATION AMBIANTE — PHASE 2 — CORRECTION V2
+UPLOAD NO GITHUB — PHASE 2 V3
 
-À envoyer dans la racine du dépôt GitHub en remplaçant les fichiers existants :
+IMPORTANTE: esta versão inclui cache-busting.
 
+1. Abra a raiz do repositório Atelier-Communication-Ambiante.
+2. Faça upload de TODOS os 8 arquivos deste ZIP DIRETAMENTE NA RAIZ do repositório.
+3. Aceite substituir os arquivos existentes.
+4. Não crie uma subpasta phase2_package_v3.
+
+Arquivos que precisam substituir os antigos:
 - phase-2-groupe-1.html
 - phase-2-groupe-2.html
 - phase-2-groupe-3.html
@@ -11,9 +17,10 @@ ATELIER COMMUNICATION AMBIANTE — PHASE 2 — CORRECTION V2
 - phase2.js
 - phase2.css
 
-Modifications de cette version :
-- suppression du texte introductif explicatif sous « Les 25 modifications prioritaires » ;
-- suppression de l'indicateur visible « Connecté · 25 propositions synchronisées avec la Phase 1 » ;
-- suppression de « 5 modifications » à côté de chaque titre de groupe ;
-- toute proposition déjà retenue par un autre groupe apparaît désormais en rose/rouge très visible avec bordure rouge et mention « Déjà retenue par le Groupe X » ;
-- l'exclusivité des choix entre groupes et la synchronisation Firebase restent inchangées.
+Mudanças visíveis:
+- removido o texto introdutório inicial da Phase 2;
+- removida qualquer indicação de “5 modifications” ao lado do nome dos grupos;
+- removido o texto/status “Connecté · 25 propositions…”;
+- uma proposta escolhida por outro grupo fica ROSA/VERMELHA forte, com borda vermelha grossa e etiqueta “INDISPONIBLE — déjà retenue par le Groupe X”;
+- botão da proposta indisponível também fica vermelho;
+- query ?v=20260908-1908 força o navegador a carregar a nova versão dos arquivos.

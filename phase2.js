@@ -4,7 +4,6 @@
   const currentGroup = Math.min(5, Math.max(1, Number(document.body.dataset.group || '1')));
   const $ = (sel) => document.querySelector(sel);
   const allProposalsEl = $('#all-proposals');
-  const statusEl = $('#phase2-status');
   const currentChoiceEl = $('#current-choice');
   const feedbackEl = $('#choice-feedback');
   const clearButton = $('#clear-choice');
@@ -16,12 +15,6 @@
 
   const proposalId = (sourceGroup, slot) => `g${sourceGroup}-p${slot}`;
   const groupKey = (group) => `groupe${group}`;
-
-  function setStatus(text, kind = '') {
-    if (!statusEl) return;
-    statusEl.textContent = text;
-    statusEl.className = `phase2-status ${kind}`.trim();
-  }
 
   function setFeedback(text, kind = '') {
     if (!feedbackEl) return;
@@ -58,7 +51,7 @@
         const text = proposalText(id);
         const ownerGroup = selectedBy(id);
         const mine = ownerGroup === currentGroup;
-        const taken = ownerGroup && ownerGroup !== currentGroup;
+        const taken = Boolean(ownerGroup && ownerGroup !== currentGroup);
 
         const row = document.createElement('article');
         row.className = `phase2-proposal${mine ? ' selected-by-me' : ''}${taken ? ' selected-by-other' : ''}${!text ? ' empty' : ''}`;
@@ -75,17 +68,24 @@
 
         const state = document.createElement('div');
         state.className = `proposal-state${mine ? ' mine' : ''}${taken ? ' taken' : ''}`;
-        if (mine) state.textContent = `Choix actuel du Groupe ${currentGroup}`;
-        else if (taken) state.textContent = `Déjà retenue par le Groupe ${ownerGroup}`;
-        else if (!text) state.textContent = 'Aucune proposition enregistrée dans ce champ.';
-        else state.textContent = `Modification ${slot} du Groupe ${sourceGroup}`;
+        if (mine) {
+          state.textContent = `Choix actuel du Groupe ${currentGroup}`;
+        } else if (taken) {
+          state.textContent = `INDISPONIBLE — déjà retenue par le Groupe ${ownerGroup}`;
+        } else if (!text) {
+          state.textContent = 'Aucune proposition enregistrée dans ce champ.';
+        } else {
+          state.textContent = `Modification ${slot} du Groupe ${sourceGroup}`;
+        }
         copy.appendChild(state);
 
         const button = document.createElement('button');
         button.type = 'button';
         button.className = 'choose-button';
-        button.textContent = mine ? 'Choisie' : 'Choisir';
-        button.disabled = !text || Boolean(taken) || mine;
+        if (mine) button.textContent = 'Choisie';
+        else if (taken) button.textContent = 'Indisponible';
+        else button.textContent = 'Choisir';
+        button.disabled = !text || taken || mine;
         button.addEventListener('click', () => chooseProposal(id, sourceGroup, slot));
 
         row.append(number, copy, button);
@@ -125,14 +125,10 @@
     try {
       const result = await dbSdk.runTransaction(selectionsRef, (current) => {
         const next = current && typeof current === 'object' ? { ...current } : {};
-
         for (let group = 1; group <= 5; group += 1) {
           const key = groupKey(group);
-          if (group !== currentGroup && next[key]?.proposalId === id) {
-            return; // transaction annulée : proposition déjà prise
-          }
+          if (group !== currentGroup && next[key]?.proposalId === id) return;
         }
-
         next[groupKey(currentGroup)] = { proposalId: id, sourceGroup, slot };
         return next;
       });
@@ -169,10 +165,7 @@
 
   function showDatabaseError(error) {
     console.error(error);
-    const code = String(error?.code || '');
-    if (code.includes('permission-denied')) setStatus('Accès refusé par Firebase : vérifiez les règles de la base.', 'error');
-    else if (code.includes('auth/operation-not-allowed')) setStatus('Activez l’authentification anonyme dans Firebase.', 'error');
-    else setStatus('Connexion Firebase impossible. Réessayez.', 'error');
+    setFeedback('Connexion à la base impossible. Réessayez.', 'error');
   }
 
   try {
@@ -183,7 +176,6 @@
     ]);
 
     dbSdk = databaseSdk;
-
     const firebaseConfig = {
       apiKey: 'AIzaSyCVZqGFfnwb8iesFizm2escpgYVoIQI6Fc',
       authDomain: 'atelier-communication-ambiante.firebaseapp.com',
@@ -199,7 +191,6 @@
     await authSdk.signInAnonymously(auth);
     db = dbSdk.getDatabase(app);
 
-    // Récupère en direct les 25 modifications de la Phase 1.
     for (let group = 1; group <= 5; group += 1) {
       dbSdk.onValue(dbSdk.ref(db, `atelier/phase1/groupe${group}/propositions`), (snapshot) => {
         for (let slot = 1; slot <= 5; slot += 1) {
@@ -214,11 +205,9 @@
       }, showDatabaseError);
     }
 
-    // Récupère les choix des cinq groupes et les met à jour en temps réel.
     dbSdk.onValue(dbSdk.ref(db, 'atelier/phase2/choix'), (snapshot) => {
       selections = snapshot.val() || {};
       render();
-      setStatus('Connecté · 25 propositions synchronisées avec la Phase 1', 'ok');
     }, showDatabaseError);
   } catch (error) {
     showDatabaseError(error);
