@@ -11,6 +11,7 @@
     const template=document.createElement('template');
     template.innerHTML=typeof html==='string'?html:'';
     template.content.querySelectorAll('script,style,iframe,object,embed,svg,math,link,meta,img,video,audio,form,input,button,textarea,select').forEach(el=>el.remove());
+    template.content.querySelectorAll('[data-section="budget"]').forEach(el=>el.remove());
     template.content.querySelectorAll('*').forEach(el=>{
       [...el.attributes].forEach(attr=>{
         if(attr.name!=='class'&&attr.name!=='data-section')el.removeAttribute(attr.name);
@@ -44,7 +45,7 @@
   function populateLegacy(data){
     if(!documentEditor)return;
     documentEditor.innerHTML=defaultDocumentHtml;
-    const values={what:data.text?.what||'',how:data.text?.how||'',where:data.text?.where||'',budget:data.text?.budget||''};
+    const values={what:data.text?.what||'',how:data.text?.how||'',where:data.text?.where||''};
     let used=false;
     Object.entries(values).forEach(([key,value])=>{if(!value)return;const slot=documentEditor.querySelector(`[data-section="${key}"] .answer-space`);if(slot){slot.textContent=value;used=true;}});
     if(!used&&data.text?.free){

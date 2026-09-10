@@ -16,7 +16,7 @@
         <div class="eyebrow">Atelier Communication Ambiante</div>
         <h1>Phase 3 — Développement approfondi</h1>
         <div class="group-badge">Groupe ${group}</div>
-        <p>Pendant <strong>20 minutes</strong>, développez concrètement la modification prioritaire retenue par votre groupe : <strong>ce que vous voulez faire, comment vous voulez le faire, où l’implanter et avec quel budget approximatif</strong>.</p>
+        <p>Pendant <strong>20 minutes</strong>, développez concrètement la modification prioritaire retenue par votre groupe : <strong>ce que vous voulez faire, comment vous voulez le faire et où l’implanter</strong>.</p>
       </section>
 
       <section class="section-card phase3-selected-card">
@@ -65,11 +65,6 @@
               <div class="editor-section" data-section="where">
                 <div class="prompt-label">3 · Où ?</div>
                 <div class="prompt-description">Indiquez l’emplacement précis dans le hall ou dans l’école et expliquez pourquoi…</div>
-                <div class="answer-space"><br></div>
-              </div>
-              <div class="editor-section" data-section="budget">
-                <div class="prompt-label">4 · Budget estimatif</div>
-                <div class="prompt-description">Donnez une estimation approximative : matériel, fabrication, installation, prestations externes…</div>
                 <div class="answer-space"><br></div>
               </div>
             </div>
