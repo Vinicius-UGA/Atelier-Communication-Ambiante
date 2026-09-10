@@ -19,15 +19,24 @@
   font-size:.8rem;
   color:var(--muted,#667085);
 }
-.example-idea-image{
-  display:block;
-  width:100%;
-  height:auto;
-  margin-top:18px;
-  border-radius:18px;
-  border:1px solid var(--line,#dbe3ef);
-  box-shadow:0 16px 42px rgba(20,55,90,.10);
+.phase1-step-heading{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-bottom:10px;
 }
+.phase1-step-heading h2{margin:0}
+.phase1-step-heading .time-pill{
+  margin:0;
+  flex:0 0 auto;
+}
+.phase1-reading-card{
+  padding-top:22px;
+  padding-bottom:22px;
+}
+.phase1-reading-card .phase1-step-heading{margin-bottom:0}
 @media(max-width:780px){
   .hall-gallery{grid-template-columns:1fr}
+  .phase1-step-heading{align-items:flex-start}
 }
