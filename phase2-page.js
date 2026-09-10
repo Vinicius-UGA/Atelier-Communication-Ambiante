@@ -37,6 +37,6 @@
         <p id="choice-feedback" class="choice-feedback" aria-live="polite"></p>
       </section>
 
-      <a class="home-link phase2-bottom-home" href="index.html">← Retour à la page principale</a>
+      <a class="home-link phase2-bottom-home" href="index.html">← Retour à la page principale pour accéder à la Phase 3</a>
     </main>`;
 })();
