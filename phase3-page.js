@@ -28,11 +28,12 @@
         <div class="phase3-editor-head">
           <div>
             <h2>Votre proposition détaillée</h2>
-            <p class="section-intro">Rédigez directement dans le document. Vous pouvez aussi importer des images, les déplacer librement et dessiner à la main sur toute la feuille.</p>
+            <p class="section-intro">Cet espace est collaboratif : les textes, les images et les dessins sont enregistrés automatiquement et synchronisés avec les autres membres du groupe.</p>
           </div>
-          <div class="save-zone">
-            <button id="save-workspace" class="phase3-primary" type="button">Enregistrer le travail</button>
-            <span id="save-status" class="save-status">Prêt.</span>
+          <div class="live-sync-box" aria-live="polite">
+            <div class="live-sync-title"><span class="live-dot"></span> Synchronisation en direct</div>
+            <span id="save-status" class="save-status">Connexion…</span>
+            <span id="presence-status" class="presence-status"></span>
           </div>
         </div>
 
@@ -49,28 +50,28 @@
           <button id="clear-drawing" class="phase3-tool-button compact danger-lite" type="button">Effacer dessin</button>
         </div>
 
-        <div id="workspace" class="workspace" aria-label="Document de travail du groupe">
+        <div id="workspace" class="workspace" aria-label="Document de travail collaboratif du groupe">
           <div class="document-text-layer">
-            <div id="document-editor" class="document-editor" contenteditable="true" spellcheck="true" aria-label="Zone de rédaction libre">
+            <div id="document-editor" class="document-editor" aria-label="Zone de rédaction collaborative">
               <div class="editor-section" data-section="what">
                 <div class="prompt-label">1 · Quoi exactement ?</div>
                 <div class="prompt-description">Décrivez précisément ce que vous souhaitez créer, modifier ou installer…</div>
-                <div class="answer-space"><br></div>
+                <div class="answer-space" contenteditable="true" spellcheck="true" aria-label="Réponse à Quoi exactement ?"><br></div>
               </div>
               <div class="editor-section" data-section="how">
                 <div class="prompt-label">2 · Comment ?</div>
                 <div class="prompt-description">Expliquez le fonctionnement, les matériaux, les étapes, les usages, les personnes impliquées…</div>
-                <div class="answer-space"><br></div>
+                <div class="answer-space" contenteditable="true" spellcheck="true" aria-label="Réponse à Comment ?"><br></div>
               </div>
               <div class="editor-section" data-section="where">
                 <div class="prompt-label">3 · Où ?</div>
                 <div class="prompt-description">Indiquez l’emplacement précis dans le hall ou dans l’école et expliquez pourquoi…</div>
-                <div class="answer-space"><br></div>
+                <div class="answer-space" contenteditable="true" spellcheck="true" aria-label="Réponse à Où ?"><br></div>
               </div>
             </div>
           </div>
           <div id="image-layer" class="image-layer" aria-label="Images ajoutées"></div>
-          <canvas id="drawing-canvas" class="drawing-canvas" aria-label="Calque de dessin"></canvas>
+          <canvas id="drawing-canvas" class="drawing-canvas" aria-label="Calque de dessin collaboratif"></canvas>
         </div>
       </section>
 
