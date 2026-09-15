@@ -36,6 +36,17 @@
   padding-bottom:22px;
 }
 .phase1-reading-card .phase1-step-heading{margin-bottom:0}
+.identity-pillars{
+  margin-top:14px;
+  padding-top:12px;
+  border-top:1px solid rgba(11,111,184,.22);
+}
+.identity-pillars ul{
+  margin:9px 0 0 1.2rem;
+  padding:0;
+  line-height:1.65;
+}
+.identity-pillars li{margin:2px 0}
 @media(max-width:780px){
   .hall-gallery{grid-template-columns:1fr}
   .phase1-step-heading{align-items:flex-start}

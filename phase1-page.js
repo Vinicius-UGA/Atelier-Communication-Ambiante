@@ -40,7 +40,18 @@
         </article>
       </div>
 
-      <div class="punchline"><strong>Fil rouge de la réflexion :</strong> « <strong>L’École de transformation durable</strong> ». Les propositions de communication ambiante doivent aider à transmettre cette identité et les valeurs de GI.</div>
+      <div class="punchline">
+        <strong>Fil rouge de la réflexion :</strong> « <strong>L’École des transformations durables</strong> ». Les propositions de communication ambiante doivent aider à transmettre cette identité et les valeurs de GI.
+        <div class="identity-pillars">
+          <strong>Piliers à garder à l’esprit :</strong>
+          <ul>
+            <li>Experts de l'industrie 4.H</li>
+            <li>Déploiement des technologies de l'industrie 4.0</li>
+            <li>Ingénieur manager</li>
+            <li>Transformation soutenable</li>
+          </ul>
+        </div>
+      </div>
 
       <div class="ramp-note">
         <div class="ramp-icon">⚠</div>
