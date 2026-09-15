@@ -1,14 +1,32 @@
-PHASE 1 — MISE À JOUR DE L'HYPOTHÈSE SUR LA RAMPE
+AJUSTEMENTS — 15/09/2026
 
-À remplacer à la racine du dépôt GitHub :
-- phase1-page.js
-- phase-1-groupe-1.html
-- phase-1-groupe-2.html
-- phase-1-groupe-3.html
-- phase-1-groupe-4.html
-- phase-1-groupe-5.html
+À remplacer directement à la racine du dépôt GitHub :
 
-Nouveau texte :
-« Pour cet atelier, considérez que la rampe pourra être retirée : toute proposition doit donc être envisageable aussi bien avec la rampe que sans elle. »
+PHASE 1
+- phase1-media.js
+- phase-1-groupe-1.html à phase-1-groupe-5.html
 
-Les autres modifications précédentes de la Phase 1 sont conservées.
+Modification :
+Le lien final est désormais affiché sur 2 lignes :
+Retour à la page principale
+pour accéder à la Phase 2
+
+PHASE 2
+- phase2-page.js
+- phase-2-groupe-1.html à phase-2-groupe-5.html
+
+Modification :
+Le lien final est désormais affiché sur 2 lignes :
+Retour à la page principale
+pour accéder à la Phase 3
+
+PHASE 3
+- phase3.js
+- phase-3-groupe-1.html à phase-3-groupe-5.html
+
+Modification :
+Dans « Modification prioritaire retenue », la ligne
+« Proposition du Groupe X · Modification Y » a été supprimée.
+Seul le texte de la modification choisie reste affiché sous le titre.
+
+Les fichiers HTML incluent une nouvelle version de cache afin de forcer le chargement des scripts mis à jour.

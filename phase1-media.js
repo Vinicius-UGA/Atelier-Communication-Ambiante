@@ -98,7 +98,7 @@
     const bottomLinks = [...document.querySelectorAll('.phase1-shell > .home-link')];
     const finalLink = bottomLinks.at(-1);
     if (finalLink) {
-      finalLink.textContent = '← Retour à la page principale pour accéder à la Phase 2';
+      finalLink.innerHTML = '← Retour à la page principale<br>pour accéder à la Phase 2';
     }
   }
 
