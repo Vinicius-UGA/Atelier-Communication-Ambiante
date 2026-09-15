@@ -55,7 +55,7 @@
 
       <div class="ramp-note">
         <div class="ramp-icon">⚠</div>
-        <div><strong>Hypothèse de travail importante</strong>Un devis est en cours pour retirer la grande rampe d’accès du hall. Pour cet atelier, considérez que <strong>la rampe sera retirée</strong> : aucune proposition ne doit dépendre de son maintien.</div>
+        <div><strong>Hypothèse de travail importante</strong>Un devis est en cours pour retirer la grande rampe d’accès du hall. Pour cet atelier, considérez que <strong>la rampe pourra être retirée</strong> : toute proposition doit donc être envisageable aussi bien avec la rampe que sans elle.</div>
       </div>
 
       <p class="small-note">Le financement concerne prioritairement la transformation du hall. Une idée de communication ambiante qui dépasse physiquement le hall peut néanmoins être proposée à titre exceptionnel si elle sert clairement les objectifs du projet.</p>

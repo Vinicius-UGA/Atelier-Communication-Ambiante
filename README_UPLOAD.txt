@@ -1,20 +1,14 @@
-PHASE 1 — MODIFICATIONS DEMANDÉES PAR LE RESPONSABLE
+PHASE 1 — MISE À JOUR DE L'HYPOTHÈSE SUR LA RAMPE
 
 À remplacer à la racine du dépôt GitHub :
 - phase1-page.js
-- phase1-media.css
 - phase-1-groupe-1.html
 - phase-1-groupe-2.html
 - phase-1-groupe-3.html
 - phase-1-groupe-4.html
 - phase-1-groupe-5.html
 
-Modifications :
-1. Fil rouge corrigé : « L’École des transformations durables »
-2. Piliers rappelés :
-   - Experts de l'industrie 4.H
-   - Déploiement des technologies de l'industrie 4.0
-   - Ingénieur manager
-   - Transformation soutenable
+Nouveau texte :
+« Pour cet atelier, considérez que la rampe pourra être retirée : toute proposition doit donc être envisageable aussi bien avec la rampe que sans elle. »
 
-Les autres éléments et le fonctionnement de la Phase 1 restent inchangés.
+Les autres modifications précédentes de la Phase 1 sont conservées.
