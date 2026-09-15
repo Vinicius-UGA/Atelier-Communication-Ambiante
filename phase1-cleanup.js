@@ -19,18 +19,20 @@ const firebaseConfig = {
     if (!auth.currentUser) await signInAnonymously(auth);
     const db = getDatabase(app);
 
-    const markerRef = ref(db, 'atelier/_maintenance/cleanup_g1_slot4_teste_20260908');
+    // Reset unique pour les tests de l'atelier.
+    const markerRef = ref(db, 'atelier/_maintenance/full_reset_20260915_v1');
     const marker = await get(markerRef);
     if (marker.val() === true) return;
 
-    const slotRef = ref(db, 'atelier/phase1/groupe1/propositions/4');
-    const snap = await get(slotRef);
-    const value = snap.val();
-    if (typeof value === 'string' && value.trim().toLowerCase() === 'teste') {
-      await remove(slotRef);
-    }
+    await Promise.all([
+      remove(ref(db, 'atelier/phase1')),
+      remove(ref(db, 'atelier/phase2')),
+      remove(ref(db, 'atelier/phase3'))
+    ]);
+
     await set(markerRef, true);
+    console.info('Historique de l’atelier réinitialisé : phases 1, 2 et 3 vidées.');
   } catch (err) {
-    console.warn('Nettoyage ponctuel non exécuté :', err);
+    console.warn('Réinitialisation ponctuelle non exécutée :', err);
   }
 })();
